@@ -10,5 +10,17 @@ object auto {
 	method image() = image
 	method position() = position
 	method image(nuevaImagen) { image = nuevaImagen }
-	method posicion(nuevaPosicion) { position = nuevaPosicion }
-}
+	method nuevaPosition(nuevaPosicion) { position = nuevaPosicion }
+	method subir() {
+    	position = position.up(1) 
+  }
+  method bajar(){
+  	position = position.down(1) 
+  }
+  method moverALaDerecha(){
+  	position = position.right(1) 
+  }
+  method moverALaIzquierda(){
+  	position = position.left(1) 
+  }
+ }

@@ -4,15 +4,19 @@ import wollok.game.*
 
 program miPrimerWollokGame {
 	// límites del tablero de juego
-	game.width(14)
-	game.height(8)
+	game.width(20)
+	game.height(15)
 
 	//fondo del tablero de juego
-	game.boardGround("empedrado.jpg")
+	game.boardGround("paredLadrillos3.jpg")
 
 	// agregamos a nuestro objeto auto
 	game.addVisual(auto)
-
+	auto.image('autitoAzul.png')
+	keyboard.up().onPressDo{auto.subir()}
+	keyboard.down().onPressDo{auto.bajar()}
+	keyboard.right().onPressDo{auto.moverALaDerecha()}
+	keyboard.left().onPressDo{auto.moverALaIzquierda()}
 	// que arranque el juego!
 	game.start()
 }
